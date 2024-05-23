@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @{
+        string[] imagePaths = { "C:\\Users\\fteet\\OneDrive\\Dokumente\\Visual Studio 2022\\Projects\\BoTech\\Webpage\\MVC\\BoTechDevelopment\\BoTechDevelopment\\wwwroot\\Images\\Logos\\ISim.png", "/Images/Logos/BoTechLogoNew.png" };
+        foreach(string path in imagePaths)
+        {
+            <img src=@path />
+        }
+        
+    }
+</div>
