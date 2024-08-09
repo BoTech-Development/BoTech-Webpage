@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Razor;
+
 namespace BoTechDevelopment.Views.Home
 {
 
@@ -36,8 +37,13 @@ namespace BoTechDevelopment.Views.Home
         {
             if (imgPaths[img] != null)
             {
-                WriteLiteral(  "< img src = "@imgPaths[img]" />");
+               // WriteLiteral(  "< img src = "@imgPaths[img]" />");
             }
+        }
+
+        public override Task ExecuteAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

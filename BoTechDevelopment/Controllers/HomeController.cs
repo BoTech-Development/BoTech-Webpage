@@ -39,16 +39,5 @@ namespace BoTechDevelopment.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
-
-        public ActionResult carousel()
-        {
-            return View();
-        }
-        public ActionResult Test()
-        {
-            return View();
-        }
-
     }
 }

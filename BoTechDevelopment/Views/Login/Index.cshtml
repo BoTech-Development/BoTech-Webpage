@@ -1,4 +1,5 @@
-﻿@model BoTechDevelopment.Models.LoginViewModel
+﻿@using BoTechDevelopment.Models.LoginSystem.Frontend
+@model LoginViewModel
 
 @{
     ViewData["Title"] = "Login";
@@ -30,8 +31,8 @@
 </div>
 
 <div>
-    <a asp-action="Register">Register</a>
-    <a asp-action="ForgotPassword">Forgot Password?</a>
+    <a asp-controller="Login" asp-action="Register">Register</a>
+    <a asp-controller="Login" asp-action="ForgotPassword">Forgot Password?</a>
 </div>
 
 @section Scripts {

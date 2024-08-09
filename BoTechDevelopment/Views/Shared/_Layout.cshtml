@@ -3,32 +3,85 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BoTechDevelopment</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] | BoTechDevelopment</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/BoTechDevelopment.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <!-- Navigation -->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/Images/Logos/BoTechLogoNew.png" width="256" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="/Home"><img src="http://www.botech-computer.de/Assets/Logos/BoTechLogoNew.png" height="48" alt="BoTech-Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link " style="" asp-area="" asp-controller="Home" asp-action="Index">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://www.github.com/BoTech-Development" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                                </svg>
+                                GitHub
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="nav-link" asp-area="" asp-controller="Repos" asp-action="Index">Repos</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="nav-link" asp-area="" asp-controller="Repos" asp-action="CurrentStatus">Current Status</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" asp-area="" asp-controller="Repos" asp-action="VersionHistory">Version History</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="https://www.github.com/BoTech-Development">To GitHub</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link " asp-area="" asp-controller="3D_library" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-badge-3d-fill" viewBox="0 0 16 16">
+                                    <path d="M10.157 5.968h-.844v4.06h.844c1.116 0 1.621-.667 1.621-2.02 0-1.354-.51-2.04-1.621-2.04"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.184 4.368c.646 0 1.055.378 1.06.9.008.537-.427.919-1.086.919-.598-.004-1.037-.325-1.068-.756H3c.03.914.791 1.688 2.153 1.688 1.24 0 2.285-.66 2.272-1.798-.013-.953-.747-1.38-1.292-1.432v-.062c.44-.07 1.125-.527 1.108-1.375-.013-.906-.8-1.57-2.053-1.565-1.31.005-2.043.734-2.074 1.67h1.103c.022-.391.383-.751.936-.751.532 0 .928.33.928.813.004.479-.383.835-.928.835h-.632v.914zM8.126 11h2.189C12.125 11 13 9.893 13 7.985c0-1.894-.861-2.984-2.685-2.984H8.126z"/>
+                                </svg>
+                                3d-Print -Library
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Test">Test</a>
+                            <a class="nav-link " asp-area="" asp-controller="Forum" asp-action="Index">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots d-inline" viewBox="0 0 16 16">
+                                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                    <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                </svg>
+                                Forum
+                            </a>
                         </li>
                     </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-success" ><a class="nav-link" asp-area="" asp-controller="Login" asp-action="Index">Login</a></button>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -39,69 +92,73 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="link-table">
-            <div class="link-table-row-container">
-                <div class="link-table-header">
-                    We:
+    <footer>
+         <!-- Horizontal Line -->
+
+        <p style="width: 100%; background-color: #F0F0F0; height: 16px"></p>
+
+        <!-- Footer Menu -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm" style="margin-bottom: 10px">
+                    <div class="card" style="width: 18rem; background-color: #65B000">
+                        <div class="card-body">
+                            <h5 class="card-title">We: </h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a class="card-link" asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                            <li class="list-group-item"> <a class="card-link" asp-area="" asp-controller="Home" asp-action="Impress">Impress</a></li>
+                            <li class="list-group-item"><a class="card-link" asp-area="" asp-controller="Home" asp-action="Privacy">Private Policy</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <ul>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Privacy"><div class="link-table-row-content"> Privacy</div></a>
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="About"><div class="link-table-row-content">About</div></a>
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Contact"><div class="link-table-row-content">Contact</div></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="link-table-row-container">
-                <div class="link-table-header">
-                    Products:
+                <div class="col-sm" style="margin-bottom: 10px">
+                    <div class="card" style="width: 18rem; background-color: #65B000">
+                        <div class="card-body">
+                            <h5 class="card-title">Repos: </h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a class="card-link" asp-area="" asp-controller="Repo" asp-action="BoTech-Update">BoTech-Update</a></li>
+                            <li class="list-group-item"> <a class="card-link" asp-area="" asp-controller="Repo" asp-action="ISim">ISim</a></li>
+                            <li class="list-group-item"><a class="card-link" asp-area="" asp-controller="Repo" asp-action="API">API</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="link-table-row-content">
-                    <li>
-                        <a asp-area="" asp-controller="Products" asp-action="I-Sim"><div class="link-table-row-content">I-Sim</div></a>
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Products" asp-action="One"><div class="link-table-row-content">One</div></a>
-                    </li>
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="I-Sim"><div class="link-table-row-content">Hardware</div></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="link-table-row-container">
-                <div class="link-table-header">
-                    New's:
+                <div class="col-sm" style="margin-bottom: 10px">
+                    <div class="card" style="width: 18rem; background-color: #65B000">
+                        <div class="card-body">
+                            <h5 class="card-title">Quick Links: </h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a class="card-link" asp-area="" asp-controller="News" asp-action="Index">New's</a></li>
+                            <li class="list-group-item"> <a class="card-link" asp-area="" asp-controller="" asp-action=""></a></li>
+                            <li class="list-group-item"><a class="card-link" asp-area="" asp-controller="" asp-action=""></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <ul class="link-table-row-content">
-                    <li>
-                                <a asp-area="" asp-controller="News" asp-action="Index"><div class="link-table-row-content">New's</div></a>
-                    </li>
-                    <li>
-                                
-                    </li>
-                    <li>
-                                
-                    </li>
-                </ul>
-            </div>
-            <div class="img-section">
-                Another Page Developed with:
-                <br />
-                <img src="/Images/Logos/OneLogo.png" />
             </div>
         </div>
-        
-        <div class="container">
-            &copy; 2024 - BoTechDevelopment - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+
+
+        <!-- Copyright Message -->
+        <div class="container" style="margin-top: 10px">
+            <p class="text-muted" style="font-size: 18px">Copyright:  <a href="/Home">BoTech</a> ©2024 All Rights Reserved.</p>
+        </div>
+        <div class="container" style="margin-top: 10px">
+            <p>
+                Content Version: v1.0.1 <br/>
+                Last Content Update: 13.06.2024
+            </p>
+            <p>
+                App Version: v1.0.1.PreRelease <br/>
+                Last App Update: 04.07.2024
+            </p>
         </div>
     </footer>
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

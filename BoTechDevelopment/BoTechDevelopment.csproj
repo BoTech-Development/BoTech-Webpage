@@ -7,11 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="Markdig" Version="0.37.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\BoTech\Layout\" />
+    <Folder Include="API_Models\Forum\" />
+    <Folder Include="API_Models\Products\" />
+    <Folder Include="Helpers\UI\" />
+    <Folder Include="Models\Test\" />
+    <Folder Include="pup\Images\" />
+    <Folder Include="pup\Uploads\3D_Library\26_Segment_Display\v1.0.1.Release\" />
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
@@ -64,6 +71,23 @@
     <None Include="wwwroot\Images\Logos\ToggleOnRight.png" />
     <None Include="wwwroot\Images\Logos\ToogleOffLeft.png" />
     <None Include="wwwroot\Images\Logos\ToogleOffRight.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Helpers\UI\BootstrapHtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\ISim.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\v1.0.1.Release\Boden_v3.step" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\v1.0.1.Release\Bottom v3.f3d" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\v1.0.1.Release\Bottom v3.step" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\v1.0.1.Release\NewFile1.txt" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\v1.0.1.Release\Rotor v2.step" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\v1.0.1.Release\Rotor v3.f3d" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\v1.0.1.Release\Top v2.f3d" />
+    <_ContentIncludedByDefault Remove="wwwroot\pup\Uploads\3D_Library\Water_Pump\v1.0.1.Release\Top v2.step" />
   </ItemGroup>
 
 </Project>

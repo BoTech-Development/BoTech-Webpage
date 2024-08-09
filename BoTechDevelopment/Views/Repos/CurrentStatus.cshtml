@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "CurrentStatus | BoTech";
+}
+
+<style>
+    .outOfSupport {
+        background-color: #fdb3ab;
+    }
+
+    .stillMaintained {
+        background-color: #fef8c6;
+    }
+
+    .currentVersion {
+        background-color: #d4f4b4;
+    }
+
+    .info {
+        background-color: #8ed9f6;
+    }
+
+</style>
+
+<div class="row">
+    <div class="col-4">
+        <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+            <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#CurrentStatus">Current Status</a>
+                <a class="nav-link" href="#VersionHistory">Version History</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link ms-3 my-1" href="#VersionHistory-BoTechUpdate">BoTechUpdate</a>
+                    <a class="nav-link ms-3 my-1" href="#VersionHistory-ISim">ISim</a>
+                    <a class="nav-link ms-3 my-1" href="#VersionHistory-BoTechMarketplace">BoTech-AppStore</a>
+                    <a class="nav-link ms-3 my-1" href="#VersionHistory-API">API</a>
+                </nav>
+            </nav>
+        </nav>
+    </div>
+    <div class="col-8">
+        <h1 id="CurrentStatus">Current Status</h1>
+        <table class="table">
+            <thead>
+                <tr style="background-color: lightgrey;">
+                    <th>Repo</th>
+                    <th>Status</th>
+                    <th>Current Version</th>
+                    <th>Start Date</th>
+                    <th>End of Support</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="currentVersion">
+                    <td>✅BoTechUpdate</td>
+                    <td>no Release Version published.</td>
+                    <td>v1.0.2.Beta</td>
+                    <td>20.12.23</td>
+                    <td>Undef</td>
+                    <td> A Release Version will be coming soon for Desktop Clients.</td>
+                </tr>
+                <tr class="currentVersion">
+                
+                    <td>✅BoTech-Marketplace</td>
+                    <td>no Release Version published.</td>
+                    <td>v1.0.4.Beta</td>
+                    <td>20.12.23</td>
+                    <td>Undef</td>
+                    <td>Waiting for other Repos to be released.</td>
+                </tr>
+            
+                <tr class="info">
+                
+                    <td>ℹ️ISim</td>
+                    <td>no Release Version published.</td>
+                    <td>v1.0.3.Beta</td>
+                    <td>26.09.23</td>
+                    <td>Undef</td>
+                    <td>Migration from WPF to Avalonia.</td>
+                </tr>
+            
+
+                <tr class="info">
+                    <td>ℹ️Api</td>
+                    <td>no Release Version published</td>
+                    <td>v1.0.5.PreRelease</td>
+                    <td>01.04.24</td>
+                    <td>Undef</td>
+                    <td>Coming soon with the BoTechUpdate Client. </td>
+                </tr>
+                <tr class="currentVersion">
+                    <td>✅Webpage</td>
+                    <td>Some bug Fixes by the Download Page</td>
+                    <td>v1.0.1.Beta</td>
+                    <td>01.04.24</td>
+                    <td>Undef</td>
+                    <td>We are trying to get our new 3D library into the release stage.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 id="VersionHistory">Version History</h1>
+        <h2 id="VersionHistory-BoTechUpdate">BoTech Update</h2>
+        <table>
+        </table>
+        <h2 id="VersionHistory-ISim">ISim</h2>
+        <table>
+        </table>
+        <h2 id="VersionHistory-BoTechMarketplace">BoTech Marketplace</h2>
+        <table>
+        </table>
+        <h2 id="VersionHistory-API">API</h2>
+        <table>
+        </table>
+    </div>
+</div>

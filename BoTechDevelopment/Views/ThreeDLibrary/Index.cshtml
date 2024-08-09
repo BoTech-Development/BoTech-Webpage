@@ -1,0 +1,122 @@
+﻿
+@model BoTechDevelopment.ViewModels.ThreeD_Library.SearchResults
+@{
+    ViewData["Title"] = "3D Library";
+}
+<h1>
+    BoTech 3D-Library
+</h1>
+@using (Html.BeginForm("Search", "ThreeDLibrary", FormMethod.Post))
+{
+    <div class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searchText" id="searchText">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </div>
+}
+
+@{
+    int page = @Model.Page;
+    const int itemsPerPage = 3;
+}
+@{
+    if (Model.SearchText != "" && Model.Posts.Count == 0)
+    {
+        <div class="alert alert-warning" role="alert">
+            <h1>Nothing Found:</h1>
+            <h3>Request: @Model.SearchText</h3>
+        </div>
+    }
+}
+
+
+<div class="container" style="margin-top: 10px">
+    <div class="row">
+        @for (int i = itemsPerPage * page - itemsPerPage; i < itemsPerPage * page; i++)
+        {
+            if (@Model.Posts.Count >= i)
+            {
+                <div class="col" style="margin-top: 10px">
+                    <div class="card" style="width: 18rem;">
+                        <img src="@Model.Posts[i].MainImageSource" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@Model.Posts[i].CardTitle</h5>
+                            <p class="card-text"> @Html.Raw(Markdig.Markdown.ToHtml(@Model.Posts[i].CardText))</p>
+                            <a asp-route-PostName="@Model.Posts[i].Title" asp-controller="ThreeDLibrary" asp-action="ViewPost" class="btn btn-primary">Read more...</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+<div style="margin-top: 15px">
+    <div class="mx-auto" style="width: fit-content ">
+        <nav aria-label="Page navigation example" style="margin-top: 10px">
+            <ul class="pagination">
+                @{
+                    int prevPage = page - 1;
+                    // smaller than max count of pages
+                    if (prevPage >= 1)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" asp-route-page="@prevPage" asp-controller="ThreeDLibrary" asp-action="Index" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                                    <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
+                                </svg>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item disabled ">
+                            <a class="page-link" asp-route-page="@prevPage" asp-controller="ThreeDLibrary" asp-action="Index" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC107" class="bi bi-arrow-left-square-fill bg-secondary" viewBox="0 0 16 16">
+                                    <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
+                                </svg>
+                            </a>
+                        </li>
+                    }
+
+                    for (int i = 1; i < Math.Round((double)Model.Posts.Count / itemsPerPage, MidpointRounding.ToPositiveInfinity); i++)
+                    {
+                        if (i == page)
+                        {
+                            <li class="page-item">
+                                <a class="page-link active" asp-route-page="@i" asp-controller="ThreeDLibrary" asp-action="Index">@i</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item">
+                                <a class="page-link" asp-route-page="@i" asp-controller="ThreeDLibrary" asp-action="Index">@i</a>
+                            </li>
+                        }
+                    }
+
+                    int nextPage = page + 1;
+                    // smaller than max count of pages
+                    if (nextPage < Math.Round((double)Model.Posts.Count / itemsPerPage, MidpointRounding.ToPositiveInfinity))
+                    {
+                        <li class="page-item">
+                            <a class="page-link" asp-route-page="@nextPage" asp-controller="ThreeDLibrary" asp-action="Index" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#007BFF" class="bi bi-arrow-right-square-fill bg-black" viewBox="0 0 16 16">
+                                    <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+                                </svg>
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="page-item disabled alert-danger">
+                            <a class="page-link" asp-route-page="@nextPage" asp-controller="ThreeDLibrary" asp-action="Index" aria-label="Next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC107" class="bi bi-arrow-right-square-fill bg-secondary" viewBox="0 0 16 16">
+                                    <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+                                </svg>
+                            </a>
+                        </li>
+                    }
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

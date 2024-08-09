@@ -1,0 +1,98 @@
+﻿@model BoTechDevelopment.ViewModels.ThreeD_Library.ViewPostViewModel
+
+@{
+    ViewData["Title"] = "3D_Library | View";
+}
+
+
+@{
+    <div class="card" id="POST">
+
+        <!-- Slide Show -->
+        <a class="btn btn-primary" style="" asp-action="Index" asp-controller="ThreeDLibrary" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
+            </svg>
+            Back to the Results
+        </a>
+
+        <div id="carouselExampleCaptions" class="carousel slide" style="background-color: gray; margin-top: 10px">
+            <div class="carousel-indicators">
+                
+                <!-- Generate Sub Buttons Dynamically -->
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                @for (int i = 1; i < Model.Post.ImageSources.Count; i++)
+                {
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="@i" aria-label="Slide @i"></button>
+                }
+            </div>
+            <div class="carousel-inner">
+                @foreach (string imgPath in Model.Post.ImageSources)
+                {
+                    <div class="carousel-item active">
+                        <img src="@imgPath" class="d-block w-100" height="500" width="500" alt="...">
+                    </div>
+                }
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Menu -->
+        
+        <div class="card-body">
+            <h1 class="card-title">@Model.Post.Title</h1>
+            <hr>
+            <div class="row">
+                <div class="col" >
+                    <div style="border: 1px solid #909090; border-radius: 8px; padding: 5px">
+                        <h5>Author:</h5>
+                        <img src="/pup/Images/Logos/BoTechLogoNewSmall.png" class="rounded-circle" width="32" alt="...">
+                        <a asp-controller="Home" asp-action="About">Florian Teetz</a><br/>
+                        Published: 04.08.24
+                    </div>
+                </div>
+                <!-- Menu: Download -->
+                <div class="col" style="margin-left: 10px">
+                    <div style="border: 1px solid #909090; border-radius: 8px; padding: 5px">
+                        <h5>Download: </h5>
+                        <form asp-action="Download" asp-route-postName="@Model.Post.Title" asp-route-selectedVersion="@Model.SelectedVersion" asp-route-selectedFile="@Model.SelectedFile">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                            @Html.DropDownListFor(m => m.SelectedVersion,
+                                @Model.GetSelectedListItemsForVersions(),
+                                "Select A Version",
+                                new
+                                {
+                                    @class = "form-control dropdown",
+                                    @style = "margin-top: 10px"
+                                })
+                            @Html.DropDownList("SelectedFile",
+                                @Model.GetSelectedListItemsForFiles(@Model.SelectedVersion),
+                                "Select A Version",
+                                new
+                                {
+                                    @class = "form-control dropdown",
+                                    @style = "margin-top: 10px"
+                                })
+                            <input style="margin-top: 10px" type="submit" value="Download !" class="btn btn-primary"/>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+            <!-- Rest of the Post -->
+            <p class="card-text"> @Html.Raw(Markdig.Markdown.ToHtml(@Model.Post.Content))</p>
+        </div>
+    </div>
+}
+
+
+

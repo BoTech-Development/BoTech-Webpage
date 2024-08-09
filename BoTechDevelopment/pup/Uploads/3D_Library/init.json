@@ -1,0 +1,234 @@
+﻿{
+  "SearchText": null,
+  "Page": 1,
+  "Posts": [
+    {
+      "MainImageSource": "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/BottomB.png",
+      "ImageSources": [
+        "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/BottomA.png",
+        "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/BottomB.png",
+        "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/TopA.png",
+        "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/TopB.png",
+        "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/Rotor.png"
+      ],
+      "ThreeDFiles": [
+        {
+          "Files": [
+            "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/Bottom v3.f3d",
+            "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/Bottom v3.step",
+            "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/Rotor v3.f3d",
+            "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/Rotor v2.step",
+            "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/Bottom v2.f3d",
+            "/pup/Uploads/3D_Library/Water_Pump/v1.0.1.Release/Top v2.step"
+          ],
+          "Version": {
+            "Id": 0,
+            "Major": 1,
+            "Minor": 0,
+            "Patch": 1,
+            "SecondPatch": -1,
+            "UpdateRevision": 0,
+            "UpdateMode": 0,
+            "Description": "",
+            "Published": "0001-01-01T00:00:00",
+            "AvailableUntil": "0001-01-01T00:00:00",
+            "UpdateSetting": {
+              "Id": 0,
+              "FilesToDelete": [],
+              "FilesToStay": [],
+              "FilesToDownload": []
+            }
+          }
+        }
+      ],
+      "Content": "# Project: Water Pump\nThe water pump project had no direct intention. Rather, this short project was born out of boredom. The goal was to develop a pump that:\n1. Fits a certain motor from my collection.\n2. Can transport a lot of water using the motor.\n   - Above all, a fast flow rate should be achieved.\n3. Is compatible with the standard hose diameter of 13mm.\n4. Sucks in the water using a hose connection.\n___\n## Current Status:\n- The project will not be developed further for the time being. ",
+      "Title": "Water Pump",
+      "CardText": "## The best Water Pump Ever!!!",
+      "CardTitle": "Water Pump"
+    },
+    {
+      "MainImageSource": "/pup/Uploads/3D_Library/26_Segment_Display/v1.0.1.Release/Front.png",
+      "ImageSources": [
+        "/pup/Uploads/3D_Library/26_Segment_Display/v1.0.1.Release/Front.png",
+        "/pup/Uploads/3D_Library/26_Segment_Display/v1.0.1.Release/Back.png",
+        "/pup/Uploads/3D_Library/26_Segment_Display/v1.0.1.Release/Segments.png"
+      ],
+      "ThreeDFiles": [
+        {
+          "Files": [
+            "/pup/Uploads/3D_Library/26_Segment_Display/v1.0.1.Release/Case v4.f3d",
+            "/pup/Uploads/3D_Library/26_Segment_Display/v1.0.1.Release/Case v4.step",
+            "/pup/Uploads/3D_Library/26_Segment_Display/v1.0.1.Release/Segments v5.f3d",
+            "/pup/Uploads/3D_Library/26_Segment_Display/v1.0.1.Release/Segments v5.step"
+          ],
+          "Version": {
+            "Id": 0,
+            "Major": 1,
+            "Minor": 0,
+            "Patch": 1,
+            "SecondPatch": -1,
+            "UpdateRevision": 0,
+            "UpdateMode": 0,
+            "Description": "",
+            "Published": "0001-01-01T00:00:00",
+            "AvailableUntil": "0001-01-01T00:00:00",
+            "UpdateSetting": {
+              "Id": 0,
+              "FilesToDelete": [],
+              "FilesToStay": [],
+              "FilesToDownload": []
+            }
+          }
+        }
+      ],
+      "Content": "# Project: 26 Segment Display\nI *love* segment displays and am particularly fascinated by segment displays that have many segments. Unfortunately, I could never find a finished display with more than 16 segments on any sales platform. So I thought to myself: I've been able to do what others can do for a long time... \" So I started designing and printing a segment display. Mine has a total of 26 segments.\nA website that inspired me: [aresluna.org](https://aresluna.org/segmented-type/)\n\nWhat the display should be able to do:\n1. The complete alphabet with lower and upper case letters should be able to be displayed.\n2. Several displays should be able to be connected to one another using connectors to form large displays.\n\n## Current Status:\n1. If have designed this Display I think a year ago and never touched this Project again.\n2. But I will finish it some day...",
+      "Title": "26 Segment Display",
+      "CardText": "## The most powerful and estehtic Display!",
+      "CardTitle": "26 Segment Display"
+    },
+    {
+      "MainImageSource": "/pup/Uploads/3D_Library/Fischertechnik/Reed_Sensor_Halter/v1.0.1.Release/Main.png",
+      "ImageSources": [
+        "/pup/Uploads/3D_Library/Fischertechnik/Reed_Sensor_Halter/v1.0.1.Release/Main.png"
+      ],
+      "ThreeDFiles": [
+        {
+          "Files": [
+            "/pup/Uploads/3D_Library/Fischertechnik/Reed_Sensor_Halter/v1.0.1.Release/ReedSensorHalter v1.f3d",
+            "/pup/Uploads/3D_Library/Fischertechnik/Reed_Sensor_Halter/v1.0.1.Release/ReedSensorHalter v1.step"
+          ],
+          "Version": {
+            "Id": 0,
+            "Major": 1,
+            "Minor": 0,
+            "Patch": 1,
+            "SecondPatch": -1,
+            "UpdateRevision": 0,
+            "UpdateMode": 0,
+            "Description": "",
+            "Published": "0001-01-01T00:00:00",
+            "AvailableUntil": "0001-01-01T00:00:00",
+            "UpdateSetting": {
+              "Id": 0,
+              "FilesToDelete": [],
+              "FilesToStay": [],
+              "FilesToDownload": []
+            }
+          }
+        }
+      ],
+      "Content": "# Project: Mounting Component For Fischertechnik Reed Sensor\nA few years ago, Fischertechnik added a reed sensor to its product range. Unfortunately, there is still no mounting component for the sensor. I would like to change that with this part.\n\n## Current Status:\n1. This project is completed.",
+      "Title": "Mounting Component For Fischertechnik Reed Sensor",
+      "CardText": "## A new Component for Fischertechnik!!!",
+      "CardTitle": "Mounting Component For Fischertechnik Reed Sensor"
+    },
+    {
+      "MainImageSource": "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/Main.png",
+      "ImageSources": [
+        "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/Main.png"
+      ],
+      "ThreeDFiles": [
+        {
+          "Files": [
+            "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/DoppelStatikTeil v5.f3d",
+            "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/DoppelStatikTeil v5.step"
+          ],
+          "Version": {
+            "Id": 0,
+            "Major": 1,
+            "Minor": 0,
+            "Patch": 1,
+            "SecondPatch": -1,
+            "UpdateRevision": 0,
+            "UpdateMode": 0,
+            "Description": "",
+            "Published": "0001-01-01T00:00:00",
+            "AvailableUntil": "0001-01-01T00:00:00",
+            "UpdateSetting": {
+              "Id": 0,
+              "FilesToDelete": [],
+              "FilesToStay": [],
+              "FilesToDownload": []
+            }
+          }
+        }
+      ],
+      "Content": "# Project: Double Static Part for Fischertechnik\nI like building with Fischertechnik, but unfortunately it lacks stable parts and parts that allow you to build quickly.\nThat's why I developed a static part that allows you to build as quickly and stably as possible with Fischertechnik.\n\n\n## Current Status:\n1. Since the grooves used to connect the thin Fischertechnik static connectors are spaced incorrectly from each other, there will be other versions of this part.",
+      "Title": "Fischertechnik Static",
+      "CardText": "## The most stable Fischertechnik Part.",
+      "CardTitle": "Fischertechnik Static Part"
+    },
+    {
+      "MainImageSource": "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/Main.png",
+      "ImageSources": [
+        "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/Main.png"
+      ],
+      "ThreeDFiles": [
+        {
+          "Files": [
+            "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/DoppelStatikTeil v5.f3d",
+            "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/DoppelStatikTeil v5.step"
+          ],
+          "Version": {
+            "Id": 0,
+            "Major": 1,
+            "Minor": 0,
+            "Patch": 1,
+            "SecondPatch": -1,
+            "UpdateRevision": 0,
+            "UpdateMode": 0,
+            "Description": "",
+            "Published": "0001-01-01T00:00:00",
+            "AvailableUntil": "0001-01-01T00:00:00",
+            "UpdateSetting": {
+              "Id": 0,
+              "FilesToDelete": [],
+              "FilesToStay": [],
+              "FilesToDownload": []
+            }
+          }
+        }
+      ],
+      "Content": "# Project: Double Static Part for Fischertechnik\nI like building with Fischertechnik, but unfortunately it lacks stable parts and parts that allow you to build quickly.\nThat's why I developed a static part that allows you to build as quickly and stably as possible with Fischertechnik.\n\n\n## Current Status:\n1. Since the grooves used to connect the thin Fischertechnik static connectors are spaced incorrectly from each other, there will be other versions of this part.",
+      "Title": "Fischertechnik Static",
+      "CardText": "## The most stable Fischertechnik Part.",
+      "CardTitle": "Fischertechnik Static Part"
+    },
+    {
+      "MainImageSource": "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/Main.png",
+      "ImageSources": [
+        "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/Main.png"
+      ],
+      "ThreeDFiles": [
+        {
+          "Files": [
+            "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/DoppelStatikTeil v5.f3d",
+            "/pup/Uploads/3D_Library/Fischertechnik/Doppel_Statik_Teil/v1.0.1.Release/DoppelStatikTeil v5.step"
+          ],
+          "Version": {
+            "Id": 0,
+            "Major": 1,
+            "Minor": 0,
+            "Patch": 1,
+            "SecondPatch": -1,
+            "UpdateRevision": 0,
+            "UpdateMode": 0,
+            "Description": "",
+            "Published": "0001-01-01T00:00:00",
+            "AvailableUntil": "0001-01-01T00:00:00",
+            "UpdateSetting": {
+              "Id": 0,
+              "FilesToDelete": [],
+              "FilesToStay": [],
+              "FilesToDownload": []
+            }
+          }
+        }
+      ],
+      "Content": "# Project: Double Static Part for Fischertechnik\nI like building with Fischertechnik, but unfortunately it lacks stable parts and parts that allow you to build quickly.\nThat's why I developed a static part that allows you to build as quickly and stably as possible with Fischertechnik.\n\n\n## Current Status:\n1. Since the grooves used to connect the thin Fischertechnik static connectors are spaced incorrectly from each other, there will be other versions of this part.",
+      "Title": "Fischertechnik Static",
+      "CardText": "## The most stable Fischertechnik Part.",
+      "CardTitle": "Fischertechnik Static Part"
+    }
+  ]
+}

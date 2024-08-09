@@ -1,0 +1,9 @@
+﻿@model BoTechDevelopment.ViewModels.Download.DownloadViewModel
+@{
+    ViewData["Title"] = "Download";
+}
+
+<h3>Please wait while Download starts...</h3>
+<h4>If the Download don't start automatically please click <a href="@Model.FilePath" download>here.</a></h4>
+<h6>File: @Model.FilePath</h6>
+<iframe width="100" height="100" src="@Model.FilePath"></iframe>
