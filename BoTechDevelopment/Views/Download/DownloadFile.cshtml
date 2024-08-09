@@ -3,7 +3,40 @@
     ViewData["Title"] = "Download";
 }
 
+<div id="countdown"></div>
+
 <h3>Please wait while Download starts...</h3>
 <h4>If the Download don't start automatically please click <a href="@Model.FilePath" download>here.</a></h4>
 <h6>File: @Model.FilePath</h6>
 <iframe width="100" height="100" src="@Model.FilePath"></iframe>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            var max = new Date().getTime() + 10000;
+            
+            var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = max - now;
+                
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = "<h3>" 
+                    + minutes + "m " + seconds + "s </h3>"
+                    + "<p>Percent: " + (100 * (10 - seconds)) / 10 + " %</p>"
+                    + "<div class='progress' role='progressbar' aria-label='Basic example' aria-valuenow='" + (100 * (10 - seconds)) / 10 + "' aria-valuemin='0' aria-valuemax='100'> <div class='progress-bar' style='width: " + (100 * (10 - seconds)) / 10 + "%'></div></div>";
+      
+      
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Redirecting...";
+                    window.location.href = "@Model.RedirectUrl";
+                }
+            }, 100);
+        });
+    </script>

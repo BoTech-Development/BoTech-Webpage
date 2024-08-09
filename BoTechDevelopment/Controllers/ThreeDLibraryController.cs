@@ -102,6 +102,7 @@ public class ThreeDLibraryController : Controller
         string path = _webHostEnvironment.WebRootPath.Replace("wwwroot", "");
         StreamReader reader = new StreamReader(path + "/pup/Uploads/3D_Library/init.json");
         SearchResults = JsonConvert.DeserializeObject<SearchResults>(reader.ReadToEnd());
+        reader.Close();
     }
     public IActionResult Index()
     {
@@ -162,19 +163,9 @@ public class ThreeDLibraryController : Controller
         };
         if ((model.Post = SearchResults.Posts.Where(post => post.Title.Equals(postName)).FirstOrDefault()) != null)
         {
-            string path = _webHostEnvironment.WebRootPath;
-            path = path + model.Post.ThreeDFiles[selectedVersion].Files[selectedFile];
-            
-           /* byte[] fileRaw = System.IO.File.ReadAllBytes(path);
-            FileResult fileResult = File(fileRaw, System.Net.Mime.MediaTypeNames.Text.Plain, path.Substring(path.LastIndexOf("/"), path.Length - path.LastIndexOf("/")));
-            ViewBag.FileResult = fileResult;
-            */
-           //DownloadFile(path);
-           
-            //return View("ViewPost", model);
             return RedirectToAction("DownloadFile", "Download", new
             {
-                redirectUrl = "",
+                redirectUrl = "/ThreeDLibrary/ViewPost?PostName=" + postName,
                 filePath = model.Post.ThreeDFiles[selectedVersion].Files[selectedFile]
             });
         }
