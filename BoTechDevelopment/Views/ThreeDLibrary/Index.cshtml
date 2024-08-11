@@ -77,7 +77,7 @@
                         </li>
                     }
 
-                    for (int i = 1; i < Math.Round((double)Model.Posts.Count / itemsPerPage, MidpointRounding.ToPositiveInfinity); i++)
+                    for (int i = 1; i < Math.Round((double)Model.Posts.Count / itemsPerPage, MidpointRounding.ToPositiveInfinity) +1; i++)
                     {
                         if (i == page)
                         {
@@ -95,7 +95,7 @@
 
                     int nextPage = page + 1;
                     // smaller than max count of pages
-                    if (nextPage < Math.Round((double)Model.Posts.Count / itemsPerPage, MidpointRounding.ToPositiveInfinity))
+                    if (nextPage < Math.Round((double)Model.Posts.Count / itemsPerPage, MidpointRounding.ToPositiveInfinity) +1)
                     {
                         <li class="page-item">
                             <a class="page-link" asp-route-page="@nextPage" asp-controller="ThreeDLibrary" asp-action="Index" aria-label="Next">
